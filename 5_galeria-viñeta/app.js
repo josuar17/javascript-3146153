@@ -66,7 +66,26 @@ function toggleAudiotres() {
 playstop.addEventListener("click", toggleAudiotres);
 
 
+// Siguiente Boton Siguiente Galeria
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const Escena1 = document.querySelector(".Escena-1");
+const Escena2 = document.querySelector(".Escena-2");
+const Escena3 = document.querySelector(".Escena-3");    
+let i = 1
 
+next.addEventListener("click", function (){
+  if(i === 1){
+    Escena1.classList.add("d-none")
+    Escena2.classList.remove("d-none")
+    i++
+  }else if(1 == 2){
+    Escena2.classList.add("d-none")
+    Escena3.classList.remove("d-none")
+    i++
+  }
+
+})
 
 
 
