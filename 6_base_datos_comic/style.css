@@ -6,9 +6,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #3a3a3a;
+  background-color: black;
   color: #ffffff;
   line-height: 1.6;
+  background-image: url(./img/Fondo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -17,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: rgba(0,0,0,0.8);
+  background: white;
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,7 +41,7 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -63,7 +67,7 @@ body {
   width: 100%; height: 100%;
   object-fit: cover;
   opacity: 0.6;
-  background-color: #3a3a3a;
+  background-color: black;
 }
 
 .hero-content {
@@ -119,6 +123,7 @@ body {
 }
 
 .card {
+  padding: 20px;
   background: #0d1117;
   border-radius: 10px;
   overflow: hidden;
@@ -126,7 +131,7 @@ body {
 }
 
 .card img {
-  width: 30%;
+  
   height: 200px;
   object-fit: cover;
 }
@@ -154,6 +159,65 @@ footer {
   margin-top: 50px;
   border-top: 1px solid #222;
 }
+.comic-info {
+  padding: 50px 20px;
+  background-color: #420909;
+  text-align: center;
+}
+
+.comic-info h2.titulo-comic {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.comic-info p.descripcion-comic {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.comic-info img.imagen-comic {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.comic-info ul.lista-caps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comic-info ul.lista-caps li {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.comic-info ul.lista-caps li:hover {
+  transform: translateY(-5px);
+}
+
+.comic-info ul.lista-caps li p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.comic-info ul.lista-caps li img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 
 
 
