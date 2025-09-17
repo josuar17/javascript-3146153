@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #3d0000;
+  color: #fff;
+}
+
+/* CABECERA estilo Netflix */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(20,20,20,0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.btn-volver {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e50914;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+.contenedor {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* INFO CAPÍTULO estilo banner Netflix */
+.imagen-fondo {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.imagen-fondo img {
+  width: 100%;
+ 
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-gradiente {
+  
+  inset: 0;
+  background: linear-gradient(to top, rgba(20,20,20,0.9), rgba(0,0,0,0));
+}
+
+.info-texto {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 70%;
+}
+
+.numero-capitulo {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.titulo-capitulo {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.descripcion-capitulo {
+  margin: 1rem 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.btn-play {
+  background: #ff0000;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-play:hover {
+  background: #f40612;
+}
+
+/* LISTA DE CAPÍTULOS (tipo carrusel vertical) */
+.lista-capitulos {
+  height: 90vh;
+  overflow-y: scroll;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.lista-capitulos h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.miniaturas img {
+  width: 50%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.miniaturas img:hover {
+  transform: scale(1.05);
+}
+
+.activo {
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 0.3rem;
+}
+
+/* OVERLAY VIDEO tipo Netflix */
+.overlay-video {
+  display: none; /* visible con JS */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contenedor-video {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+.contenedor-video video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cerrar-video {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
