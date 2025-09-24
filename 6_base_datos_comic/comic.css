@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,299 +7,172 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: #ffffff;
-  line-height: 1.6;
-  background-image: url(./img/Fondo.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: #3d0000;
+  color: #fff;
 }
 
-
-.navbar {
+/* CABECERA estilo Netflix */
+.cabecera {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background: white;
-  position: fixed;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(20,20,20,0.9);
+  position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  z-index: 100;
+}
+
+.btn-volver {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #ff0000;
+  color: #e50914;
+  text-transform: uppercase;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ff0000;
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.6;
-  background-color: black;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 600px;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #ff0000;
- 
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero-content button {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  background: #ff0000;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.hero-content button:hover {
-  transform: scale(1.1);
-}
-
-/* Capítulos */
-.capitulos {
-  padding: 60px 20px;
-  text-align: center;
-  background: #360000;
-  color: #ff0000;
-
-}
-.capitulos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.grid {
+/* MAIN */
+.contenedor {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.card {
-  padding: 20px;
-  background: #0d1117;
-  border-radius: 10px;
+/* INFO CAPÍTULO estilo banner Netflix */
+.imagen-fondo {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  border-radius: 12px;
   overflow: hidden;
+}
+
+.imagen-fondo img {
+  width: 100%;
+ 
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-gradiente {
+  
+  inset: 0;
+  background: linear-gradient(to top, rgba(20,20,20,0.9), rgba(0,0,0,0));
+}
+
+.info-texto {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  max-width: 70%;
+}
+
+.numero-capitulo {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.titulo-capitulo {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.descripcion-capitulo {
+  margin: 1rem 0;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.btn-play {
+  background: #ff0000;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-play:hover {
+  background: #f40612;
+}
+
+/* LISTA DE CAPÍTULOS (tipo carrusel vertical) */
+.lista-capitulos {
+  height: 90vh;
+  overflow-y: scroll;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.lista-capitulos h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.miniaturas img {
+  width: 50%;
+  border-radius: 6px;
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
-.card img {
-  
-  height: 200px;
-  object-fit: cover;
+.miniaturas img:hover {
+  transform: scale(1.05);
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  margin: 15px 0 10px;
-}
-
-.card p {
-  font-size: 0.9rem;
-  color: #ccc;
-  padding: 0 10px 20px;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-
-footer {
-  background: #0d1117;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-  border-top: 1px solid #222;
-}
-.comic-info {
-  padding: 50px 20px;
-  background-color: #420909;
-  text-align: center;
-}
-
-.comic-info h2.titulo-comic {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.comic-info p.descripcion-comic {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #ffffff;
-}
-
-.comic-info img.imagen-comic {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.comic-info ul.lista-caps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.comic-info ul.lista-caps li {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.comic-info ul.lista-caps li:hover {
-  transform: translateY(-5px);
-}
-
-.comic-info ul.lista-caps li p {
+.activo {
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #444;
+  color: #ffffff;
+  margin-top: 0.3rem;
 }
 
-.comic-info ul.lista-caps li img {
+/* OVERLAY VIDEO tipo Netflix */
+.overlay-video {
+  display: none; /* visible con JS */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contenedor-video {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+.contenedor-video video {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-
-
-
-
-@media (max-width: 1024px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-content h2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-content button {
-    font-size: 1rem;
-    padding: 8px 16px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-/* ======================= */
-/* Estilos para MÓVIL      */
-/* ======================= */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    padding: 15px;
-  }
-
-  .nav-links {
-    
-    gap: 10px;
-  }
-
-  .hero {
-    padding: 0 15px;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-  }
-
-  .hero-content button {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .capitulos {
-    padding: 40px 15px;
-  }
-
-  .capitulos h2 {
-    font-size: 2rem;
-  }
-
-  .card img {
-    height: 150px;
-  }
-
-  .card h3 {
-    font-size: 1.2rem;
-  }
-
-  .card p {
-    font-size: 0.85rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 15px;
-  }
+.cerrar-video {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }

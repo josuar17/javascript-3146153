@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capítulo</title>
+  <title>Reproducción Capítulo</title>
   <link rel="stylesheet" href="capitulo.css">
 </head>
 <body>
@@ -13,55 +13,29 @@
     <h1 class="logo">POST MORTEM</h1>
   </header>
 
-  <!-- MAIN -->
-  <main class="contenedor">
-    <section class="info-capitulo">
-      <div class="imagen-fondo">
-        <img src="./img/Capitulo 1.jpeg" alt="Imagen del capítulo">
-        <div class="overlay-gradiente"></div>
-        <div class="info-texto">
-          <h2 class="numero-capitulo">Capítulo 1</h2>
-          <h1 class="titulo-capitulo">El apagón</h1>
-          <p class="descripcion-capitulo">
-            La humanidad enfrenta su primera noche sin tecnología. Los sobrevivientes deben adaptarse a un mundo apagado.
-          </p>
-          <button class="btn-play" id="btnPlay">▶ Reproducir</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- LISTA DE CAPÍTULOS -->
-    <aside class="lista-capitulos">
-      <h3>Más capítulos</h3>
-      <div class="miniaturas">
-        <a href="capitulo.html?cap=1"><img src="./img/Capitulo 1.jpeg" alt="Capítulo 1">
-          <p class="activo">
-            Capítulo 1: El Comienzo del Colapso
-          </p>
-        </a>
-        <a href="capitulo.html?cap=2"><img src="./img/Capitulo 2.jpeg" alt="Capítulo 2">
-          <p class="activo">
-            Capítulo 2: La Ciudad Vacía
-          </p>
-        </a>
-        <a href="capitulo.html?cap=3"><img src="./img/Capitulo 3.jpeg" alt="Capítulo 3">
-          <p class="activo">
-            Capítulo 3: Aliados En Las Cenizas
-          </p>
-        </a>
-      </div>
-    </aside>
-  </main>
-
-  <!-- OVERLAY VIDEO -->
-  <div class="overlay-video" id="overlayVideo">
-    <div class="contenedor-video">
-      <button class="cerrar-video" id="cerrarVideo">✖</button>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <main class="contenedor-player">
+    <div class="player-box">
       <video controls autoplay>
         <source src="video/cap1.mp4" type="video/mp4">
         Tu navegador no soporta este video.
       </video>
+
+      <!-- INFO DEL CAPÍTULO -->
+      <div class="overlay-info">
+        <h2>EL APAGÓN</h2>
+        <h3>El Inicio del Colapso</h3>
+        <p>
+          En medio de un mundo sin tecnología, un grupo de jóvenes debe 
+          enfrentarse a la incertidumbre y a su propia fragilidad.
+        </p>
+        <!-- BOTÓN SIGUIENTE DEBAJO DEL TEXTO -->
+        <a href="capitulo2.html" class="btn-next">Siguiente capítulo ➜</a>
+      </div>
     </div>
-  </div>
+  </main>
 </body>
 </html>
+
+
+
