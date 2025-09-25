@@ -8,6 +8,7 @@ const comic = {
     "capitulos": [
 
         {
+            id: 1,
 
             nombreCap: "El Apagón ",
             imgPortada: "./img/Capitulo 1.jpeg",
@@ -17,6 +18,7 @@ const comic = {
 
         },
         {
+            id: 2,
             nombreCap: "La Ciudad Vacía",
             imgPortada: "./img/Capitulo 2.jpeg",
             video: "video/cap2.mp4",
@@ -26,6 +28,7 @@ const comic = {
         },
 
         {
+            id: 3,
             nombreCap: "Aliados En Las Cenizas",
             imgPortada: "./img/Capitulo 3.jpeg",
             video: "video/cap1.mp4",

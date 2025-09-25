@@ -144,7 +144,7 @@ body {
   margin-top: 0.3rem;
 }
 
-/* OVERLAY VIDEO tipo Netflix */
+/* OVERLAY VIDEO */
 .overlay-video {
   display: none; /* visible con JS */
   position: fixed;
