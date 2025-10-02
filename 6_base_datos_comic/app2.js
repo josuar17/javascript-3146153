@@ -19,7 +19,9 @@ comic.capitulos.forEach(cap => {
       <img src="${cap.imgPortada}" width="150" alt="">
     </a>
   `
-    listacaps.appendChild(li);
+  // para incorporar los li en la listacaps 
+    listacaps.appendChild(li);      
+
 
 });
 

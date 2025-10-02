@@ -11,8 +11,8 @@ const comic = {
             id: 1,
 
             nombreCap: "El Apagón ",
-            imgPortada: "./img/Capitulo 1.jpeg",
-            video: "video/cap1.mp4",
+            imgPortada: "./img/capitulo 1.jpeg",
+            video: "./img/video1.mp4",
             descripcion: "Sin luz ni señal, solo queda el instinto",
             personajes: ["Alejandro"]
 
@@ -20,8 +20,8 @@ const comic = {
         {
             id: 2,
             nombreCap: "La Ciudad Vacía",
-            imgPortada: "./img/Capitulo 2.jpeg",
-            video: "video/cap2.mp4",
+            imgPortada:  "./img/capitulo 2.jpeg",
+            video: "./img/video1.mp4",
             descripcion: "Entre ruinas y silencio, cada sombra es una amenaza ",
             personajes: ["Alejandro", "Dario", "Abril"]
 
@@ -30,8 +30,8 @@ const comic = {
         {
             id: 3,
             nombreCap: "Aliados En Las Cenizas",
-            imgPortada: "./img/Capitulo 3.jpeg",
-            video: "video/cap1.mp4",
+            imgPortada:  "./img/capitulo 3.jpeg",
+            video: "./img/video1.mp4",
             descripcion: "Sobrevivir no es estar solo, es elegir en quién confiar",
             personajes: ["Alejandro", "Abril", "Dario"]
 

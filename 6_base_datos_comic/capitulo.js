@@ -12,7 +12,7 @@ console.log(capitulo)
 //Mostrar la información del capitulo en pantalla
 container.innerHTML = `
 
- 
+
 <!-- HEADER -->
   <header class="cabecera">
     <button class="btn-volver" onclick="window.history.back()">← Atrás</button>
@@ -22,6 +22,13 @@ container.innerHTML = `
   <!-- MAIN -->
   <main class="contenedor">
     <section class="info-capitulo">
+
+
+
+
+  
+
+
       <div class="imagen-fondo">
         <img src="${capitulo.imgPortada}" alt="Imagen del capítulo">
         <div class="overlay-gradiente"></div>
@@ -32,11 +39,16 @@ container.innerHTML = `
           ${capitulo.descripcion}
           
           </p>
-          <button class="btn-play" id="btnPlay">▶ Reproducir</button>
+         
+          <a class="btn-play" id="btnPlay" href="./video.html?id=${capitulo.id}">▶ Reproducir</a>
         </div>
         
       </div>
     </section>
+     
+
+      
+
 
     <!-- LISTA DE CAPÍTULOS -->
     <aside class="lista-capitulos">
@@ -60,6 +72,12 @@ container.innerHTML = `
       </div>
     </aside>
   </main>
+       
+ 
+
+
+    
+
 
   <!-- OVERLAY VIDEO -->
   <div class="overlay-video" id="overlayVideo">
